@@ -5,13 +5,13 @@ $(call inherit-product, vendor/cm/config/gsm.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, $(LOCAL_PATH)/full_ancora.mk)
+$(call inherit-product, $(LOCAL_PATH)/full_rugby.mk)
 
-PRODUCT_RELEASE_NAME := ancora
+PRODUCT_RELEASE_NAME := rugby
 
 # Setup device configuration
-PRODUCT_NAME := cm_ancora
-PRODUCT_DEVICE := ancora
+PRODUCT_NAME := cm_rugby
+PRODUCT_DEVICE := rugby
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := GT-I8150

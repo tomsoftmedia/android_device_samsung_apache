@@ -12,10 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# This file lists the product definition files that define
-# configurations which are actually buildable (e.g. through lunch)
-#
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(LOCAL_PATH)/ancora.mk)
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_rugby.mk
+# The gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_eu_supl.mk)
+
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := full_rugby
+PRODUCT_DEVICE := rugby
+PRODUCT_BRAND := Samsung
+PRODUCT_MANUFACTURER := Samsung
+PRODUCT_MODEL := GT-I8150
