@@ -31,7 +31,6 @@
 #include <unistd.h>
 
 #include <cutils/log.h>
-#include <ui/OverlayHtc.h>
 #include <camera/CameraParameters.h>
 #include <hardware/camera.h>
 #include <binder/IMemory.h>
@@ -269,7 +268,7 @@ static camera_memory_t *wrap_memory_data(priv_camera_device_t *dev,
 
     LOGI("%s: data: %p size: %i", __FUNCTION__, data, size);
 
-    LOGI(" offset:0x%x ",  offset);
+    //LOGI(" offset:0x%x ",  offset);
 
     //#define DUMP_CAPTURE_JPEG
 #ifdef DUMP_CAPTURE_JPEG
@@ -485,10 +484,10 @@ int camera_set_preview_window(struct camera_device * device,
     dev->preview_width = preview_width;
     dev->preview_height = preview_height;
 
-    dev->overlay =  new Overlay(wrap_set_fd_hook,
+    /*dev->overlay =  new Overlay(wrap_set_fd_hook,
                                 wrap_set_crop_hook,
                                 wrap_queue_buffer_hook,
-                                (void *)dev);
+                                (void *)dev);*/
 
     gCameraHals[dev->cameraid]->setOverlay(dev->overlay);
     rv = 0;
