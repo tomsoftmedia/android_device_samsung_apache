@@ -22,7 +22,8 @@ PRODUCT_LOCALES += hdpi
 # Boot screen
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ARIESVE.rle:root/ARIESVE.rle \
-    $(LOCAL_PATH)/charging.rle:root/charging.rle
+    $(LOCAL_PATH)/charging.rle:root/charging.rle \
+    $(LOCAL_PATH)/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
 # Support files
 PRODUCT_COPY_FILES += \
