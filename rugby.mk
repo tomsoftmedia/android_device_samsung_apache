@@ -159,9 +159,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 #PRODUCT_COPY_FILES += \
 #    $(LOCAL_KERNEL):kernel
 
-TARGET_KERNEL_SOURCE := kernel/samsung/rugby
-TARGET_KERNEL_CONFIG := kernel_config_rugby
-
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 

@@ -142,6 +142,8 @@ TARGET_RECOVERY_INITRC := device/samsung/rugby/init.recovery.rc
 BOARD_UMS_LUNFILE := /sys/devices/platform/usb_mass_storage/lun0/file
 # End recovery stuff
 
-TARGET_PREBUILT_KERNEL := device/samsung/rugby/prebuilt/zImage
+#TARGET_PREBUILT_KERNEL := device/samsung/rugby/prebuilt/zImage
+TARGET_KERNEL_SOURCE := kernel/samsung/rugby
+TARGET_KERNEL_CONFIG := cyanogenmod_rugby_defconfig
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
