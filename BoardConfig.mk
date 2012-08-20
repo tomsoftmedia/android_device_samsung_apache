@@ -139,6 +139,8 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 #BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/rugby/recovery/recovery_keys.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/rugby/recovery/graphics.c
 TARGET_RECOVERY_INITRC := device/samsung/rugby/init.recovery.rc
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_UMS_LUNFILE := /sys/devices/platform/usb_mass_storage/lun0/file
 # End recovery stuff
 
