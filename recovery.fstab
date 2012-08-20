@@ -11,4 +11,4 @@
 
 
 /sdcard     vfat        /dev/block/mmcblk1p1          /dev/block/mmcblk0p28
-/sd-ext     vfat        /dev/block/mmcblk0p28 
+/external_sd vfat        /dev/block/mmcblk0p28 
