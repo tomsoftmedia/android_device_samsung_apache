@@ -30,8 +30,8 @@ USE_CAMERA_STUB := true
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/rugby/include
 
-TARGET_BOARD_PLATFORM := msm7x30
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
+TARGET_BOARD_PLATFORM := msm8x55
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno205
 
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
@@ -136,7 +136,7 @@ BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_SDCARD_INTERNAL := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/rugby/recovery/recovery_keys.c
+#BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/rugby/recovery/recovery_keys.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/rugby/recovery/graphics.c
 TARGET_RECOVERY_INITRC := device/samsung/rugby/init.recovery.rc
 BOARD_UMS_LUNFILE := /sys/devices/platform/usb_mass_storage/lun0/file
