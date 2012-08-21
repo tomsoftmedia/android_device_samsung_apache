@@ -31,7 +31,7 @@ USE_CAMERA_STUB := true
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/rugby/include
 
 TARGET_BOARD_PLATFORM := msm7x30
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno205
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
@@ -75,6 +75,7 @@ BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
 
 BOARD_USES_LIBSECRIL_STUB := true
 
+BOARD_HAVE_SAMSUNG_AUDIO := true
 BOARD_USES_QCOM_AUDIO_RESETALL := true
 TARGET_USES_QCOM_LPA := true
 
@@ -89,14 +90,14 @@ USE_OPENGL_RENDERER := true
 ENABLE_WEBGL := true
 BOARD_USE_SKIA_LCDTEXT := true
 
-BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
+#BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 
-TARGET_USES_C2D_COMPOSITION := true
-TARGET_USES_OVERLAY := false
-TARGET_USES_SF_BYPASS := false
-TARGET_HAVE_BYPASS := false
-TARGET_GRALLOC_USES_ASHMEM := false
-TARGET_USES_GENLOCK := true
+#TARGET_USES_C2D_COMPOSITION := true
+#TARGET_USES_OVERLAY := false
+#TARGET_USES_SF_BYPASS := false
+#TARGET_HAVE_BYPASS := false
+#TARGET_GRALLOC_USES_ASHMEM := false
+#TARGET_USES_GENLOCK := true
 
 # QCOM webkit
 TARGET_FORCE_CPU_UPLOAD := true
@@ -104,11 +105,11 @@ TARGET_FORCE_CPU_UPLOAD := true
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_GPS := true
 
-BOARD_USES_HTC_CAMERA := true
+#BOARD_USES_HTC_CAMERA := true
 
-BOARD_USE_LEGACY_TOUCHSCREEN := true
+#BOARD_USE_LEGACY_TOUCHSCREEN := true
 
-TARGET_PROVIDES_LIBLIGHTS := true
+#TARGET_PROVIDES_LIBLIGHTS := true
 
 BOARD_VENDOR_QCOM_AMSS_VERSION := 6225
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := ancora
@@ -141,11 +142,12 @@ BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/rugby/recovery/graphics.c
 TARGET_RECOVERY_INITRC := device/samsung/rugby/init.recovery.rc
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_UMS_LUNFILE := /sys/devices/platform/usb_mass_storage/lun0/file
 # End recovery stuff
 
 #TARGET_PREBUILT_KERNEL := device/samsung/rugby/prebuilt/zImage
-TARGET_KERNEL_SOURCE := kernel/samsung/rugby
-TARGET_KERNEL_CONFIG := cyanogenmod_rugby_defconfig
+#TARGET_KERNEL_SOURCE := kernel/samsung/rugby
+TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30
+#TARGET_KERNEL_CONFIG := cyanogenmod_rugby_defconfig
+TARGET_KERNEL_CONFIG := rugby_defconfig
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
