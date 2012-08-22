@@ -145,9 +145,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # End recovery stuff
 
 #TARGET_PREBUILT_KERNEL := device/samsung/rugby/prebuilt/zImage
-#TARGET_KERNEL_SOURCE := kernel/samsung/rugby
 TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30
-#TARGET_KERNEL_CONFIG := cyanogenmod_rugby_defconfig
-TARGET_KERNEL_CONFIG := rugby_defconfig
+TARGET_KERNEL_CONFIG := apache_defconfig
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
