@@ -143,6 +143,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # End recovery stuff
 
 TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30
-TARGET_KERNEL_CONFIG := apache_defconfig
+TARGET_KERNEL_CONFIG := ancora_defconfig
 #TARGET_PREBUILT_KERNEL := device/samsung/rugby/prebuilt/zImage
 
