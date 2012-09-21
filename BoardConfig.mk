@@ -26,9 +26,9 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/rugby/BoardConfigVendor.mk
+-include vendor/samsung/apache/BoardConfigVendor.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/rugby/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/apache/include
 
 TARGET_BOARD_PLATFORM := msm7x30
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
@@ -44,8 +44,8 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_ROTATOR_KERNEL_FORMATS
 COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT -DSAMSUNG_CAMERA_QCOM
 COMMON_GLOBAL_CFLAGS += -DWITH_QCOM_LPA
 
-TARGET_BOOTLOADER_BOARD_NAME := rugby
-TARGET_OTA_ASSERT_DEVICE := rugby,SGH-I847
+TARGET_BOOTLOADER_BOARD_NAME := apache
+TARGET_OTA_ASSERT_DEVICE := apache,SGH-I847
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
@@ -82,7 +82,7 @@ TARGET_USES_QCOM_LPA := true
 # FM Radio
 BOARD_HAVE_FM_RADIO := false
 
-BOARD_EGL_CFG := device/samsung/rugby/egl.cfg
+BOARD_EGL_CFG := device/samsung/apache/egl.cfg
 
 USE_OPENGL_RENDERER := true
 ENABLE_WEBGL := true
@@ -135,15 +135,14 @@ BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_SDCARD_INTERNAL := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-#BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/rugby/recovery/recovery_keys.c
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/rugby/recovery/graphics.c
-TARGET_RECOVERY_INITRC := device/samsung/rugby/init.recovery.rc
+#BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/apache/recovery/recovery_keys.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/apache/recovery/graphics.c
+TARGET_RECOVERY_INITRC := device/samsung/apache/init.recovery.rc
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 # End recovery stuff
 
-#TODO: Switch to source kernel once stable
-#TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30
-#TARGET_KERNEL_CONFIG := apache_defconfig
-TARGET_PREBUILT_KERNEL := device/samsung/rugby/prebuilt/zImage
+TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30
+TARGET_KERNEL_CONFIG := apache_defconfig
+#TARGET_PREBUILT_KERNEL := device/samsung/apache/prebuilt/zImage
 

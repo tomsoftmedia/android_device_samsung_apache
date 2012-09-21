@@ -5,13 +5,13 @@ $(call inherit-product, vendor/cm/config/gsm.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, $(LOCAL_PATH)/full_rugby.mk)
+$(call inherit-product, $(LOCAL_PATH)/full_apache.mk)
 
-PRODUCT_RELEASE_NAME := rugby
+PRODUCT_RELEASE_NAME := apache
 
 # Setup device configuration
-PRODUCT_NAME := cm_rugby
-PRODUCT_DEVICE := rugby
+PRODUCT_NAME := cm_apache
+PRODUCT_DEVICE := apache
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := SGH-I847

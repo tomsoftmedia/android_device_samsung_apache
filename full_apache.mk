@@ -13,14 +13,14 @@
 # limitations under the License.
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, $(LOCAL_PATH)/rugby.mk)
+$(call inherit-product, $(LOCAL_PATH)/apache.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_rugby
-PRODUCT_DEVICE := rugby
+PRODUCT_NAME := full_apache
+PRODUCT_DEVICE := apache
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := SGH-I847
