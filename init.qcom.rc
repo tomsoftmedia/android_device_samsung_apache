@@ -1,6 +1,8 @@
 import init.qcom.usb.rc
 
 on init
+	loglevel 9
+
     export EXTERNAL_STORAGE /mnt/sdcard
     export SECONDARY_STORAGE /mnt/external_sd
     mkdir /mnt/sdcard 0000 system system
