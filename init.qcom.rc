@@ -72,12 +72,9 @@ on boot
     # for Jig
     chmod 0664 /sys/devices/virtual/jig/jig/jig
 
-    # for SMD function test
-    chmod 0664 /sys/devices/platform/lcdc_samsung_ancora.0/lcd_connected
-
     # this value will be referd in msm7k liblight. we change permission of this file due to cts fail.
-    chmod 0664 /sys/devices/virtual/sec/ts/brightness
-    chown system system /sys/devices/virtual/sec/ts/brightness
+    chmod 0664 /sys/class/leds/lcd-backlight/brightness
+    chown system system /sys/class/leds/lcd-backlight/brightness
 
     # TSP Test Mode
     chown radio system /sys/devices/virtual/sec/qt602240_noise_test/set_threshould
@@ -155,6 +152,11 @@ on boot
     chown system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
     chown system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
     chown system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
+
+    # LCD related stuff
+    chown radio radio sys/devices/virtual/gammaset/switch_gammaset/gammaset_file_cmd
+    chown radio system sys/devices/virtual/sec/sec_lcd/lcd_power
+    chown radio system sys/devices/virtual/sec/sec_lcd/lcdtype_file_cmd
 
 on emmc-fs
     chmod 0666 /dev/block/mmcblk0p14
