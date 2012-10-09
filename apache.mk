@@ -53,6 +53,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/etc/wifi/nvram_net.txt:system/vendor/firmware/nvram_net.txt \
     $(LOCAL_PATH)/recovery/fix_reboot.sh:recovery/root/sbin/fix_reboot.sh \
+    $(LOCAL_PATH)/recovery/fix_brightness.sh:recovery/root/sbin/fix_brightness.sh \
     $(LOCAL_PATH)/prebuilt/FileManager.apk:system/app/FileManager.apk \
     $(LOCAL_PATH)/prebuilt/Torch.apk:system/app/Torch.apk \
     $(LOCAL_PATH)/prebuilt/get_macaddrs:system/bin/get_macaddrs
