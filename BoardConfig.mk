@@ -82,7 +82,7 @@ TARGET_USES_QCOM_LPA := true
 # FM Radio
 BOARD_HAVE_FM_RADIO := false
 
-BOARD_EGL_CFG := device/samsung/apache/egl.cfg
+BOARD_EGL_CFG := device/samsung/apache/config/egl.cfg
 
 USE_OPENGL_RENDERER := true
 ENABLE_WEBGL := true
@@ -110,7 +110,7 @@ BOARD_USE_LEGACY_TOUCHSCREEN := true
 TARGET_PROVIDES_LIBLIGHTS := true
 
 BOARD_VENDOR_QCOM_AMSS_VERSION := 6225
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := apache
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := msm7x30
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -137,7 +137,7 @@ BOARD_HAS_SDCARD_INTERNAL := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 #BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/apache/recovery/recovery_keys.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/apache/recovery/graphics.c
-TARGET_RECOVERY_INITRC := device/samsung/apache/init.recovery.rc
+TARGET_RECOVERY_INITRC := device/samsung/apache/config/init.recovery.rc
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 # End recovery stuff
