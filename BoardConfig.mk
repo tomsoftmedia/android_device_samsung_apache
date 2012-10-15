@@ -143,3 +143,4 @@ TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30
 TARGET_KERNEL_CONFIG := apache_defconfig
 #TARGET_PREBUILT_KERNEL := device/samsung/apache/prebuilt/zImage
 
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
