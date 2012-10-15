@@ -47,24 +47,50 @@ on boot
     chown system input /sys/class/input/input4/wake
     chown system input /sys/class/input/input4/data
     chown system input /sys/class/input/input4/calibration
-
-    # orientation
+       
+    # geomagnetic   
     chown system input /sys/class/input/input5/enable
     chown system input /sys/class/input/input5/delay
-    chown system input /sys/class/input/input5/wake
+    chown system input /sys/class/input/input5/filter_enable
+    chown system input /sys/class/input/input5/filter_len
     chown system input /sys/class/input/input5/data
     chown system input /sys/class/input/input5/status
+    chown system input /sys/class/input/input5/wake
+    chown system input /sys/class/input/input5/position
 
-    # proximity
+    # geomagnetic raw
     chown system input /sys/class/input/input6/enable
     chown system input /sys/class/input/input6/delay
-    chown system input /sys/class/input/input6/wake
-    chown system input /sys/class/input/input6/data
-    chown system input /sys/class/input/input6/status
+    chown system input /sys/class/input/input6/data        
+    chown system input /sys/class/input/input6/threshold
+    chown system input /sys/class/input/input6/distortion
+    chown system input /sys/class/input/input6/shape
+    chown compass input /sys/class/input/input6/offsets
 
-    chown system system /sys/devices/platform/msm_sdcc.1/polling
-    chown system system /sys/devices/platform/msm_sdcc.2/polling
-    chown system system /sys/devices/platform/msm_hsusb/gadget/wakeup
+	write /sys/class/input/input6/threshold 1
+    write /sys/class/input/input6/distortion " 15 15 15"
+
+    # orientation
+    chown system input /sys/class/input/input7/enable
+    chown system input /sys/class/input/input7/delay
+    chown system input /sys/class/input/input7/wake
+    chown system input /sys/class/input/input7/data
+    chown system input /sys/class/input/input7/status
+
+    # proximity
+    chown system input /sys/class/input/input8/enable
+    chown system input /sys/class/input/input8/delay
+    chown system input /sys/class/input/input8/wake
+    chown system input /sys/class/input/input8/data
+    chown system input /sys/class/input/input8/status
+
+    # light sensor
+    chown system input /sys/class/input/input9/enable
+    chown system input /sys/class/input/input9/delay
+    chown system input /sys/class/input/input9/wake
+    chown system input /sys/class/input/input9/data
+    chown system input /sys/class/input/input9/status
+    chown system input /sys/class/input/input9/testmode
 
     # for Jig
     chmod 0664 /sys/devices/virtual/jig/jig/jig
@@ -72,6 +98,10 @@ on boot
     # this value will be referd in msm7k liblight. we change permission of this file due to cts fail.
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
+
+    # this value will be referd in msm7k liblight. we change permission of this file due to cts fail.
+    chmod 0664 /sys/devices/virtual/sec/ts/brightness
+	chown system system /sys/devices/virtual/sec/ts/brightness
 
     # TSP Test Mode
     chown radio system /sys/devices/virtual/sec/qt602240_noise_test/set_threshould
@@ -155,6 +185,12 @@ on boot
     chown radio radio sys/devices/virtual/gammaset/switch_gammaset/gammaset_file_cmd
     chown radio system sys/devices/virtual/sec/sec_lcd/lcd_power
     chown radio system sys/devices/virtual/sec/sec_lcd/lcdtype_file_cmd
+
+
+    chown system system /sys/devices/platform/msm_sdcc.1/polling
+    chown system system /sys/devices/platform/msm_sdcc.2/polling
+    chown system system /sys/devices/platform/msm_hsusb/gadget/wakeup
+
 
 on emmc-fs
     chmod 0666 /dev/block/mmcblk0p14
