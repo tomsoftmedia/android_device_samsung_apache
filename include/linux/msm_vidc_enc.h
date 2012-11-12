@@ -363,6 +363,12 @@ struct venc_ioctl_msg{
 #define VEN_IOCTL_GET_MULTI_SLICE_CFG \
 	_IOR(VEN_IOCTLBASE_ENC, 25, struct venc_ioctl_msg)
 
+/*NEW***********************************************************/
+#define VEN_IOCTL_SET_SLICE_DELIVERY_MODE \
+        _IO(VEN_IOCTLBASE_ENC, 50)
+/**************************************************************/
+
+
 /*IOCTL params:SET: InputData - venc_ratectrlcfg, OutputData - NULL
  GET: InputData - NULL, OutputData - venc_ratectrlcfg*/
 #define VEN_IOCTL_SET_RATE_CTRL_CFG \
