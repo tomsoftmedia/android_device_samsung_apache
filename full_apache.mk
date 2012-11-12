@@ -13,6 +13,8 @@
 # limitations under the License.
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+# Include rild
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(LOCAL_PATH)/apache.mk)
 
 # The gps config appropriate for this device
