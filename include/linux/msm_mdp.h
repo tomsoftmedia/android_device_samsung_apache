@@ -65,6 +65,11 @@
 #define MSMFB_WRITEBACK_TERMINATE _IO(MSMFB_IOCTL_MAGIC, 155)
 #define MSMFB_MDP_PP _IOWR(MSMFB_IOCTL_MAGIC, 156, struct msmfb_mdp_pp)
 
+/*NEW*************************************************************************/
+#define MSMFB_METADATA_SET  _IOW(MSMFB_IOCTL_MAGIC, 162, struct msmfb_metadata)
+#define MSMFB_OVERLAY_VSYNC_CTRL  _IOW(MSMFB_IOCTL_MAGIC, 160, unsigned int)
+#define MSMFB_OVERLAY_COMMIT _IOW(MSMFB_IOCTL_MAGIC, 163, unsigned int)
+
 #define FB_TYPE_3D_PANEL 0x10101010
 #define MDP_IMGTYPE2_START 0x10000
 #define MSMFB_DRIVER_VERSION	0xF9E8D701
@@ -183,6 +188,27 @@ struct mdp_img {
 
 #define MDP_CCS_SIZE	9
 #define MDP_BV_SIZE	3
+
+/*NEW*************************************************************************/
+struct mdp_blend_cfg {
+        uint32_t is_premultiplied;
+};
+
+struct msmfb_metadata {
+        uint32_t op;
+        uint32_t flags;
+        union {
+                struct mdp_blend_cfg blend_cfg;
+        } data;
+};
+
+enum {
+        metadata_op_none,
+        metadata_op_base_blend,
+        metadata_op_max
+};
+/*NEW*************************************************************************/
+
 
 struct mdp_ccs {
 	int direction;			/* MDP_CCS_RGB2YUV or YUV2RGB */
