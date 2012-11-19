@@ -1,11 +1,14 @@
 #
 # system.prop for apache
 #
+
+# RIL / Modem class(es)
 rild.libpath=/system/lib/libsec-ril.so
 rild.libargs=-d /dev/smd0
-
-ro.ril.hsxpa=1
+ro.ril.hsxpa=2
 ro.ril.gprsclass=10
+ro.ril.hsdpa.category=15
+ro.ril.hsupa.category=6
 ro.telephony.ril_class=SamsungMSMRIL
 
 # Density in DPI of the LCD of this board. This is used to scale the UI
