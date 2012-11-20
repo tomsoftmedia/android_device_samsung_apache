@@ -146,3 +146,8 @@ TARGET_KERNEL_CONFIG := apache_defconfig
 #TARGET_PREBUILT_KERNEL := device/samsung/apache/prebuilt/zImage
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
+
+# TWRP
+DEVICE_RESOLUTION := 480x800
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
