@@ -33,8 +33,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # Feature live wallpaper
 PRODUCT_COPY_FILES += \
@@ -42,6 +41,7 @@ PRODUCT_COPY_FILES += \
 
 # Media configuration xml file
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_COPY_FILES += \
@@ -49,10 +49,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/init.qcom.usb.rc:root/init.qcom.usb.rc \
     $(LOCAL_PATH)/config/ueventd.qcom.rc:root/ueventd.qcom.rc \
     $(LOCAL_PATH)/config/vold.fstab:system/etc/vold.fstab \
+    $(LOCAL_PATH)/config/fstab.qcom:root/fstab.qcom \
     $(LOCAL_PATH)/config/nvram_net.txt:system/vendor/firmware/nvram_net.txt \
     $(LOCAL_PATH)/recovery/fix_reboot.sh:recovery/root/sbin/fix_reboot.sh \
     $(LOCAL_PATH)/recovery/fix_brightness.sh:recovery/root/sbin/fix_brightness.sh \
-    $(LOCAL_PATH)/prebuilt/FileManager.apk:system/app/FileManager.apk \
     $(LOCAL_PATH)/prebuilt/Torch.apk:system/app/Torch.apk \
     $(LOCAL_PATH)/prebuilt/get_macaddrs:system/bin/get_macaddrs
 
@@ -60,18 +60,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/sec_touchscreen.idc:system/usr/idc/sec_touchscreen.idc
 
-# Bluetooth configuration files
-PRODUCT_COPY_FILES += \
-    system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
-
 # Keychars and keylayout files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keyfiles/Broadcom_Bluetooth_HID.kcm.bin:system/usr/keychars/Broadcom_Bluetooth_HID.kcm.bin \
-    $(LOCAL_PATH)/keyfiles/ancora_keypad_numeric.kcm.bin:system/usr/keychars/apache_keypad_numeric.kcm.bin \
-    $(LOCAL_PATH)/keyfiles/ancora_keypad_qwerty.kcm.bin:system/usr/keychars/apache_keypad_qwerty.kcm.bin \
+    $(LOCAL_PATH)/keyfiles/apache_keypad_numeric.kcm.bin:system/usr/keychars/apache_keypad_numeric.kcm.bin \
+    $(LOCAL_PATH)/keyfiles/apache_keypad_qwerty.kcm.bin:system/usr/keychars/apache_keypad_qwerty.kcm.bin \
     $(LOCAL_PATH)/keyfiles/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
     $(LOCAL_PATH)/keyfiles/sec_key.kl:system/usr/keylayout/sec_key.kl \
     $(LOCAL_PATH)/keyfiles/sec_power_key.kl:system/usr/keylayout/sec_power_key.kl \
+    $(LOCAL_PATH)/keyfiles/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl
 
 # Modules
 PRODUCT_COPY_FILES += \
@@ -117,6 +114,7 @@ PRODUCT_PACKAGES += \
     gps.msm7x30 \
     audio.primary.msm7x30 \
     audio_policy.msm7x30 \
+    audio_policy.conf \
     audio.a2dp.default
 
 PRODUCT_PACKAGES += \
@@ -124,7 +122,8 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVenc \
     libOmxVdec \
-    libstagefrighthw
+    libstagefrighthw \
+    libI420colorconvert
 
 PRODUCT_PACKAGES += \
     badblocks \
