@@ -71,10 +71,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keyfiles/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl
 
 # Modules
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/prebuilt/bthid.ko:root/lib/modules/bthid.ko \
-#    $(LOCAL_PATH)/prebuilt/cifs.ko:root/lib/modules/cifs.ko \
-#    $(LOCAL_PATH)/prebuilt/dhd.ko:root/lib/modules/dhd.ko
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/bthid.ko:root/lib/modules/bthid.ko \
+    $(LOCAL_PATH)/prebuilt/cifs.ko:root/lib/modules/cifs.ko \
+    $(LOCAL_PATH)/prebuilt/dhd.ko:root/lib/modules/dhd.ko
 
 # LPM
 PRODUCT_COPY_FILES += \
