@@ -94,7 +94,7 @@ USE_OPENGL_RENDERER := true
 # QCOM webkit
 TARGET_FORCE_CPU_UPLOAD := true
 
-TARGET_NO_HW_VSYNC := true
+TARGET_NO_HW_VSYNC := false
 TARGET_USES_C2D_COMPOSITION := true
 
 BOARD_NEEDS_MEMORYHEAPPMEM := true
@@ -150,7 +150,7 @@ TARGET_KERNEL_CONFIG := apache_defconfig
 #TARGET_PREBUILT_KERNEL := device/samsung/apache/prebuilt/zImage
 
 
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # TWRP
 DEVICE_RESOLUTION := 480x800
